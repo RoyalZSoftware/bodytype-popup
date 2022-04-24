@@ -41,14 +41,11 @@ ${bodyTypeHtml}
 </div>
 `;
 
-const development = true;
-
-if(!development)
-	Swal.fire({
-		title: 'Wähle deinen Körpertypen',
-		icon: '',
-		html: dialogHtml,
-		showCloseButton: true,
-		showCancelButton: true,
-		focusConfirm: false,
-	});
+Swal.fire({
+	title: 'Wähle deinen Körpertypen',
+	icon: '',
+	html: dialogHtml,
+	showCloseButton: true,
+	showCancelButton: true,
+	focusConfirm: false,
+});
