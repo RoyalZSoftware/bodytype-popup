@@ -1,0 +1,31 @@
+.rzs-bt-container {
+	flex-direction: column;
+}
+
+.rzs-bt-each {
+	display: inline-block;
+	margin: 15px 15px;
+}
+
+.rzs-bt-link {
+	transition: 0.3s all;
+	display: block;
+	padding: 5px;
+	background-color: #3498db;
+	color: #ecf0f1;
+	border: 1px solid #3498db;
+	margin-top: 10px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.rzs-bt-link:hover {
+	color: #3498db;
+	background-color: #ecf0f1;
+	cursor: pointer;
+}
+
+.rzs-bt-image {
+	max-width: 180px;
+}
+
