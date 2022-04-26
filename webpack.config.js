@@ -1,10 +1,12 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
 	"mode": "none",
 	"entry": "./src/index.js",
 	"output": {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: 'rzspopups.min.js',
 		library: 'RzsPopups',
 		libraryTarget: "var"
 	},
@@ -29,5 +31,11 @@ module.exports = {
 				type: 'asset/resource'
 			}
 		]
+	},
+	optimization: {
+		minimize: true,
+		minimizer: [new UglifyJsPlugin({
+			include: /\.js$/
+		})]
 	}
 }

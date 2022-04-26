@@ -1,2 +1,4 @@
 node_modules
-dist/
+dist/*
+!dist/rzspopups.min.js
+!dist/*.png
