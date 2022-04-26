@@ -19,6 +19,9 @@ RzsPopups.openDialog('w', config); // Dialog mit Custom Config - wird scheitern
 </script>
 ```
 
+### Beispiel
+![Showcase](./resources/showcase.png)
+
 Ansonsten beim `onclick="RzsPopups.openDialog('m')"` oder `onclick="RzsPopups.openDialog('w')"`.
 Wenn man eine Custom Config beim OnClick haben möchte, muss man diese vorher im Body anlegen und als zweiten
 Parameter übergeben `RzsPopups.openDialog(gender, config)`.
