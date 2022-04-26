@@ -12,15 +12,26 @@ Entweder beim Öffnen der Seite öffnen, dafür im `<body></body>` tag folgendes
 <script>
 RzsPopups.openDialog('m'); // Dialog für männer
 RzsPopups.openDialog('w'); // Dialog für Frauen
-
-const newConfig = RzsPopups.Config;
-newConfig.title = "Nobody is beautiful!";
-RzsPopups.openDialog('w', config); // Dialog mit Custom Config - wird scheitern
 </script>
 ```
 
 ### Beispiel
 ![Showcase](./resources/showcase.png)
+
+### Links anpassen
+Verfügbare Körpertypen für `setLink`: `oval, rechteck, sanduhr, umgedrehtes dreieck, tropfen`
+```html
+<script>
+var RzsPopupConfig = new RzsPopups.ConfigBuilder();
+
+RzsPopupConfig.setLink('oval', 'https://youtube.com', 'https://youtube.com');
+RzsPopupConfig.setLink('umgedrehtes dreieck', 'https://youtube.com', 'https://youtube.com');
+RzsPopupConfig.setLink('rechteck', 'https://rechteck.com', 'https://youtube.com');
+RzsPopupConfig.setHeading('Hallo Welt');
+
+RzsPopups.openDialog('w');
+</script>
+```
 
 Ansonsten beim `onclick="RzsPopups.openDialog('m')"` oder `onclick="RzsPopups.openDialog('w')"`.
 Wenn man eine Custom Config beim OnClick haben möchte, muss man diese vorher im Body anlegen und als zweiten

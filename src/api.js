@@ -1,13 +1,13 @@
 import Swal from 'sweetalert2';
 
-import Config from './config'
+import {Config} from './config'
 
 export class DialogBuilder {
 
 	bodyTypeHtml() {
 		return this.config.bodyTypes.map(bt => `
 <div class="rzs-bt-each">
-	<img class="rzs-bt-image" src='${this.gender === 'm' ? bt.images.m :bt.images.w}'/><a class="rzs-bt-link" href="${bt.href}">${bt.name}</a>
+	<img class="rzs-bt-image" src='${this.gender === 'm' ? bt.images.m :bt.images.w}'/><a class="rzs-bt-link" href="${this.gender === 'm' ? bt.href.m : bt.href.w}">${bt.name}</a>
 </div>
 `).join('');
 	}
@@ -21,10 +21,6 @@ export class DialogBuilder {
 
 	constructor() {
 		this.setConfig(Config);
-	}
-
-	getConfig() {
-		return this.config;
 	}
 
 	setGender(gender) {
