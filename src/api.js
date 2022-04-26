@@ -2,10 +2,10 @@ import Swal from 'sweetalert2';
 
 import Config from './config'
 
-class DialogBuilder {
+export class DialogBuilder {
 
 	bodyTypeHtml() {
-		return this.bodyTypes.map(bt => `
+		return this.config.bodyTypes.map(bt => `
 <div class="rzs-bt-each">
 	<img class="rzs-bt-image" src='${this.gender === 'm' ? bt.images.m :bt.images.w}'/><a class="rzs-bt-link" href="${bt.href}">${bt.name}</a>
 </div>
@@ -18,19 +18,28 @@ class DialogBuilder {
 		${this.bodyTypeHtml()}
 		</div>`;
 	}
+
+	constructor() {
+		this.setConfig(Config);
+	}
+
+	getConfig() {
+		return this.config;
+	}
+
 	setGender(gender) {
 		this.gender = gender;
 		return this;
 	}
 
-	setSelectOptions(bodyTypes) {
-		this.bodyTypes = bodyTypes;
+	setConfig(config) {
+		this.config = config;
 		return this;
 	}
 
 	fire() {
 		return Swal.fire({
-			title: 'Everybody is beautiful',
+			title: this.config.heading,
 			icon: '',
 			html: this.dialogHtml(),
 			showCloseButton: true,
@@ -47,9 +56,14 @@ class DialogBuilder {
 }
 
 
-export function openDialog(gender) {
+export function openDialog(gender, config) {
+	const dialogBuilder = new DialogBuilder()
+		.setGender(gender);
+
+	if (!!config) {
+		dialogBuilder.setConfig(config);
+	}
 	new DialogBuilder()
 		.setGender(gender)
-		.setSelectOptions(Config.bodyTypes)
 		.fire();
 }

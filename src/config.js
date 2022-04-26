@@ -14,8 +14,7 @@ export default {
 	bodyTypes: [
 		{
 			name: 'Oval',
-			description: 'Ovalförmig',
-			href: 'https://google.com',
+			href: 'https://example.com',
 			images: {
 				w: wOval,
 				m: mOval 
@@ -23,8 +22,7 @@ export default {
 		},
 		{
 			name: 'Rechteck',
-			description: 'Rechteck',
-			href: 'https://google.com',
+			href: 'https://example.com',
 			images: {
 				w: wRectangle,
 				m: mRectangle
@@ -32,8 +30,7 @@ export default {
 		},
 		{
 			name: 'Sanduhr',
-			description: 'Sanduhr',
-			href: 'https://google.com',
+			href: 'https://example.com',
 			images: {
 				w: wSanduhr,
 				m: mSanduhr
@@ -41,8 +38,7 @@ export default {
 		},
 		{
 			name: 'Umgedrehtes Dreieck',
-			description: 'Umgedrehtes Dreieck',
-			href: 'https://google.com',
+			href: 'https://example.com',
 			images: {
 				w: wInvertedTriangle,
 				m: mInvertedTriangle
@@ -50,13 +46,13 @@ export default {
 		},
 		{
 			name: 'Tropfen',
-			description: 'Tropfen',
-			href: 'https://google.com',
+			href: 'https://example.com',
 			images: {
 				w: wTropfen,
 				m: mTropfen
 			}
 		}
 	],
+	heading: "Everybody is beautiful!",
 	paragraphText: "Um dir Produkte anzuzeigen, die perfekt auf deinen Körper zugeschnitten sind, wähle hier <strong>deinen Bodytype</strong>!",
 };

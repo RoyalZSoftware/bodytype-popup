@@ -1,4 +1,5 @@
 import './styles/main.css';
-import {openDialog} from './api.js';
+import {openDialog, DialogBuilder} from './api.js';
+import Config from './config.js';
 
-export {openDialog};
+export {openDialog, Config, DialogBuilder};

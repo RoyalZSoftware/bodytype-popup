@@ -1,19 +1,22 @@
+/* Übergreifender Container, der alles innerhalb des Dialoges beinhaltet */
 .rzs-bt-container {
 	flex-direction: column;
 }
 
+/* Container für alle Bodytypes */
 .rzs-bt-each {
 	display: inline-block;
 	margin: 15px 15px;
 }
 
+/* Button pro Bodytype */
 .rzs-bt-link {
 	transition: 0.3s all;
 	display: block;
 	padding: 5px;
 	background-color: #3498db;
-	color: #ecf0f1;
 	border: 1px solid #3498db;
+	color: #ecf0f1;
 	margin-top: 10px;
 	border-radius: 3px;
 	text-decoration: none;
