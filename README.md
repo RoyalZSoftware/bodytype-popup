@@ -3,7 +3,7 @@
 ## Installation
 Add following to the `<head></head>` tag.
 ```html
-<script src="URL-ZUM-CDN"></script>
+<script src="https://cdn.jsdelivr.net/gh/royalzsoftware/bodytype-popup@master/dist/rzspopups.min.js"></script>
 ```
 
 ## Dialoge
