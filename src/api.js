@@ -63,7 +63,5 @@ export function openDialog(gender, config) {
 	if (!!config) {
 		dialogBuilder.setConfig(config);
 	}
-	new DialogBuilder()
-		.setGender(gender)
-		.fire();
+	dialogBuilder.fire();
 }
