@@ -3,12 +3,12 @@
 ## Installation
 Add following to the `<head></head>` tag.
 ```html
-<script src=""></script>
+<script src="URL-ZUM-CDN"></script>
 ```
 
 ## Dialoge
 Entweder beim Öffnen der Seite öffnen, dafür im `<body></body>` tag folgendes:
-```
+```html
 <script>
 RzsPopups.openDialog('m'); // Dialog für männer
 RzsPopups.openDialog('w'); // Dialog für Frauen
@@ -25,6 +25,7 @@ Parameter übergeben `RzsPopups.openDialog(gender, config)`.
 
 ### Config Fields
 |field|typ|description|defaultValue|
+|-----|---|-----------|------------|
 |`bodyTypes`|Array|Enthält eine Liste an Body Type Definitionen|`[{name: 'Oval', href:'https://example.com', images: {m: mOval, w: wOval}}]`|
 |`heading`|string|Dialogtitel|`Everbody is beautiful!`|
 |`paragraphText`|string|Text unter Überschrift. HTML wird geparsed!|`Um dir Produkte anzuzeigen, die perfekt auf deinen Körper zugeschnitten sind, wähle hier <strong>deinen Bodytype</strong>!`|
